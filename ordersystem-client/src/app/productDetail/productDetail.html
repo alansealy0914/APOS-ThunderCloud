@@ -1,0 +1,34 @@
+<br><br>
+<div class="container">
+    <h5>{{title}}: &nbsp;&nbsp;<small>{{product.name}}</small></h5>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-7">
+    <table class="table table-bordered table-sm table-hover table-striped">
+      <thead class="thead-primary">
+        <tr>
+          <th style="font-size: 14px" scope="col">Description:</th>
+          <th style="font-size: 14px" scope="col">Price:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-size: 14px" scope="row">{{product.color}}</td>
+          <td style="font-size: 14px">{{product.price | currency:'USD':'symbol'}}</td>
+        </tr>
+      </tbody>
+      </table>
+      <br><br>
+      <p>Click <i>Order Key</i> to download your product order key tracking number.</p>
+      <span style="margin-left:60px"><a href="#" class="btn btn-info btn-sm" role="button"><i class="fa fa-key" style="font-size:34px;color:red"></i>&nbsp;Order Key Tracking</a></span>
+  </div>
+  <div class="col-sm-5">
+    <span style="margin-left: 90px">
+      <img [src]="url" height="250" width="350" alt=" Please click Choose File">
+    </span>
+       <br/>
+      <div class="text-right">part# : &nbsp;&nbsp;{{product.name}}</div><br>
+      <input type='file' (change)="onSelectFile($event)">
+  </div>
+</div>
